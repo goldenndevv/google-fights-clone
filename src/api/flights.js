@@ -38,6 +38,7 @@ export const fetchFlights = async ({
   try {
     const response = await axios.request(options);
     // console.log("API response:", response.data); // Log the entire response
+    console.log(response.data.data.itineraries);
     return response.data.data.itineraries; // Adjust this based on the actual structure
   } catch (error) {
     // console.error("Error fetching flight data:", error);
